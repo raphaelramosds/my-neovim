@@ -1,5 +1,15 @@
 # Meu setup Neovim
 
+## Arquivo de configuração Neovim
+
+```bash
+# Navegue ate a pasta .config
+cd ~/.config
+
+# Clone este repositorio
+git clone git@github.com:raphaelramosds/my-neovim.git nvim
+```
+
 ## Requisitos
 
 ```bash
