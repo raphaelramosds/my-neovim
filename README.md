@@ -29,3 +29,13 @@ wget -O JetBrainsMono-Nerd-Font.zip https://github.com/ryanoasis/nerd-fonts/rele
 ```
 
 2. Extraia o arquivo e instale a fonte na interface gráfica do seu sistema clicando duas vezes nos arquivos .ttf e selecionando Install.
+
+DICA: Caso esteja no Linux, não é necessário instalar uma por uma, visto que basta copiar os arquivos .ttf para o diretório de fontes
+
+```bash
+# Copie os arquivos TTF
+cp JetBrainsMono/*.ttf /usr/share/fonts
+
+# Atualizar cache de fonts
+fc-cache -vr
+```
