@@ -5,7 +5,15 @@ return {
         version = "*",
         -- config = true
         opts = {
-            open_mapping = [[<c-j>]]
+            -- CTRL + j to toggle terminal
+            open_mapping = [[<c-j>]],
+            size = function(term)
+                if term.direction == "horizontal" then
+                    return 30
+                elseif term.direction == "vertical" then
+                    return vim.o.columns * 0.4
+                end
+            end
         }
     }
     -- or

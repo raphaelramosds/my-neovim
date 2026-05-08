@@ -67,6 +67,7 @@ return {
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+            -- CTRL + F to format code 
             vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {})
         end,
     },
