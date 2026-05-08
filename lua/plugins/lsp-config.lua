@@ -38,11 +38,11 @@ return {
             }
             
             -- TODO It requires Node.js installed
-            -- vim.lsp.config['ts_ls'] = {
-            --     cmd = { 'typescript-language-server', '--stdio' },
-            --     root_markers = { 'package.json', 'tsconfig. json', 'jsconfig.json', '.git' },
-            --     capabilities = capabilities,
-            -- }
+            vim.lsp.config['ts_ls'] = {
+                cmd = { 'typescript-language-server', '--stdio' },
+                root_markers = { 'package.json', 'tsconfig. json', 'jsconfig.json', '.git' },
+                capabilities = capabilities,
+            }
             
             vim.lsp.config['phpactor'] = {
                 cmd = { 'phpactor', 'language-server' },
@@ -52,7 +52,7 @@ return {
 
             -- Habilita os LSPs automaticamente
             vim.lsp.enable('lua_ls')
-            -- vim.lsp.enable('ts_ls')
+            vim.lsp.enable('ts_ls')
             vim.lsp.enable('phpactor')
 
             vim.diagnostic.config({
@@ -67,6 +67,7 @@ return {
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+            vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {})
         end,
     },
 }
