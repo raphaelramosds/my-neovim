@@ -50,10 +50,15 @@ return {
                 capabilities = capabilities,
             }
 
+            vim.lsp.config['gopls'] = {
+
+            }
+
             -- Habilita os LSPs automaticamente
             vim.lsp.enable('lua_ls')
             vim.lsp.enable('ts_ls')
             vim.lsp.enable('phpactor')
+            vim.lsp.enable('gopls')
 
             vim.diagnostic.config({
                 virtual_text = {
